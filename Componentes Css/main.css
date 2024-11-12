@@ -244,7 +244,7 @@ footer {
 }
 
 /* Configuración para pantallas pequeñas de header-nav */
-@media (max-width: 576px) {
+@media (max-width: 800px) {
   nav {
     display: none;
     flex-direction: column;
