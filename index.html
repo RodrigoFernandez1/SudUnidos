@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sud Unidos</title>
+    <meta name="description"
+        content="SUD Unidos comparte mensajes edificantes y reflexiones de la Iglesia de Jesucristo de los Santos de los Últimos Días para acercarte a Cristo y fortalecer tu fe.">
+    <meta property="og:title"
+        content="SUD Unidos: Reflexiones de la Iglesia de Jesucristo de los Santos de los Últimos Días">
+    <meta property="og:description" content="Descubre mensajes que fortalecen la fe en Jesucristo y nos acercan a Él.">
+
     <link rel="stylesheet" href="Componentes Css/main.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -14,21 +20,25 @@
 
 <body>
     <header>
-        <div class="titulo sud">
+        <div class="titulo">
             <h1><span>Sud</span> Unidos</h1>
         </div>
 
-        <nav>
-            <a href="#">Ven, Siguume</a>
-            <a href="#">Libro de Mormon</a>
+        <!-- Botón para el menú desplegable -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="navMenu">
+            <a href="#">Ven, Sígueme</a>
+            <a href="#">Libro de Mormón</a>
             <a href="#">Biblia</a>
             <a href="#">DyC</a>
-            <a href="#">Perla de Gran Preci</a>
+            <a href="#">Perla de Gran Precio</a>
             <a href="#">Santos</a>
         </nav>
     </header>
 
     <section class="imagen-texto-boton">
+        <div class="imagen"></div>
         <div class="contenido">
             <h2>Bienvenidos a Sud Unidos</h2>
             <p>Explora nuestras ofertas y servicios con solo un clic.</p>
@@ -39,29 +49,70 @@
     <div class="container">
         <main>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300" alt="Imagen de tarjeta" class="card-image">
+                <img src="/img/img carts/venSigueme.webp" alt="Igmagen de estudia del ven, Sigueme" class="card-image">
                 <div class="card-info">
-                    <h2>Título de la tarjeta</h2>
-                    <p>Descripción breve o información adicional sobre la tarjeta.</p>
-                    <button class="card-button">Ver más</button>
+                    <h2>Ven, Sigueme</h2>
+                    <p>esta semana 11-17 noviembre Eter 1-5.</p>
+                    <button class="card-button">Estudiar</button>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/400x300" alt="Imagen de tarjeta" class="card-image">
+                <img src="/img/img carts/librodemormon.webp"
+                    alt="Imagen de Libro de Mormón para fortalecer la fe en Jesucristo" class="card-image">
                 <div class="card-info">
-                    <h2>Título de la tarjeta</h2>
-                    <p>Descripción breve o información adicional sobre la tarjeta.</p>
-                    <button class="card-button">Ver más</button>
+                    <h2>Libro de Mormon</h2>
+                    <p>Ven aprender lo mas detacado del libro de mormon.</p>
+                    <button class="card-button">Aprender mas</button>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/400x300" alt="Imagen de tarjeta" class="card-image">
+                <img src="/img/img carts/biblia.jpg" alt="Imagen de la Biblia para fortalecer la fe en Jesucristo"
+                    class="card-image">
+                <div class="card-info">
+                    <h2>Biblia</h2>
+                    <p>Ven aprender lo mas detacado de la Biblia.</p>
+                    <button class="card-button">Aprender mas</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/img/img carts/dyc.png"
+                    alt="Imagen de Doctrina y Convenios para fortalecer la fe en Jesucristo" class="card-image">
+                <div class="card-info">
+                    <h2>Docrina y Convenios</h2>
+                    <p>Ven aprender lo mas detacado de DyC.</p>
+                    <button class="card-button">Aprender mas</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/img/img carts/lpdp.png"
+                    alt="Imagen de la Perla de Gran Precio para fortalecer la fe en Jesucristo" class="card-image">
                 <div class="card-info">
                     <h2>Título de la tarjeta</h2>
-                    <p>Descripción breve o información adicional sobre la tarjeta.</p>
-                    <button class="card-button">Ver más</button>
+                    <p>Ven aprender lo mas detacado</p>
+                    <button class="card-button">Ver más...</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/img/img carts/tomos.png"
+                    alt="Imagen de Tomos Santos para conocer mas la historia de la Iglesia" class="card-image">
+                <div class="card-info">
+                    <h2>Título de la tarjeta</h2>
+                    <p>Ven aprender lo mas detacado</p>
+                    <button class="card-button">Ver más...</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/img/img carts/librodelosprofetas.png"
+                    alt="Imagen de los libros de los profetas para conocer sus historias" class="card-image">
+                <div class="card-info">
+                    <h2>Título de la tarjeta</h2>
+                    <p>Ven aprender lo mas detacado</p>
+                    <button class="card-button">Ver más...</button>
                 </div>
             </div>
         </main>
@@ -69,9 +120,14 @@
         <aside class="social-section">
             <h2>Síguenos</h2>
             <ul class="social-icons">
-                <a href=""><i class='bx bxl-youtube' style='color:#ff0000; font-size: 55px;'></i></a>
-                <a href=""><i class='bx bxl-instagram' style='color:#f56040; font-size: 50px;'></i></a>
-                <a href=""><i class='bx bxl-facebook-square' style='color:#0021e6; font-size: 50px;'></i></a>
+                <a href="https://www.youtube.com/@SudUnidos"><i class='bx bxl-youtube'
+                        style='color:#ff0000; font-size: 55px;'></i></a>
+                <a href="https://www.tiktok.com/@sudunidos"><i class='bx bxl-tiktok'
+                        style="color:#000000; font-size: 46px"></i></a>
+                <a href="https://www.instagram.com/sudunidos/?__pwa=1"><i class='bx bxl-instagram'
+                        style='color:#f56040; font-size: 50px;'></i></a>
+                <a href="https://www.facebook.com/SUDunidos"><i class='bx bxl-facebook-square'
+                        style='color:#0021e6; font-size: 50px;'></i></a>
             </ul>
 
             <div class="custom-card card-body">
@@ -103,6 +159,7 @@
     </footer>
 
     <script src="/Componentes js/strings.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

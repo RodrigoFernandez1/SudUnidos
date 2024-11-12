@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: center;
@@ -19,28 +20,38 @@ header {
 .titulo {
   padding: 1em;
   color: #cbce0d;
-  max-width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-span {
+.titulo span {
   color: #001aff;
 }
 
+/* Botón de menú para pantallas pequeñas */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #001aff;
+  cursor: pointer;
+}
+
 nav {
-  list-style: none;
   display: flex;
   gap: 20px;
 }
 
 nav a {
   text-decoration: none;
+  color: black;
 }
 
 nav a:hover {
   color: #cbce0d;
 }
 
+/* section */
 .imagen-texto-boton {
   position: relative;
   background-image: url("/img/principal/presidencia.webp");
@@ -49,18 +60,18 @@ nav a:hover {
   padding: 100px 20px 3em;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: end;
+  justify-content: flex-start;
   min-height: 400px;
 }
 
 .imagen-texto-boton .contenido {
-  max-width: 900px;
-  /*background: rgba(0, 0, 0, 0.5);*/
-  padding: 20px;
+  max-width: 600px;
+  padding: 1.2em;
   border-radius: 8px;
-  margin-left: 5em;
-  margin-top: 10em;
   font-size: 1.3em;
+  margin-right: 40%;
+  font-weight: 700;
 }
 
 .imagen-texto-boton h2 {
@@ -68,6 +79,7 @@ nav a:hover {
   font-size: 2em;
   font-family: "Ensign:Sans", Arial, "noto sans", sans-serif;
 }
+
 .imagen-texto-boton button {
   background-color: #007bff;
   color: white;
@@ -229,6 +241,24 @@ footer {
   padding: 1em;
   margin: 0;
   font-size: 0.9rem;
+}
+
+/* Configuración para pantallas pequeñas de header-nav */
+@media (max-width: 576px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+    background-color: #d9f7ff;
+  }
+
+  /* Mostrar el botón del menú */
+  .menu-toggle {
+    display: block;
+    margin-bottom: 1em;
+  }
 }
 
 /* Responsividad de fooder*/
